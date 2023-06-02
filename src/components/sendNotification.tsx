@@ -12,6 +12,7 @@ const SendNotifications = () => {
   } = useForm<FormValues>();
 
   const onSubmit = (data: FormValues) => {
+    setLoading(true);
     fetch("https://e64itmi59l.execute-api.eu-north-1.amazonaws.com/Message_Live/message", {
       method: "POST",
       headers: {
@@ -91,7 +92,7 @@ const SendNotifications = () => {
           <button
             type="submit"
             disabled={loading}
-            className=" transition ease-in duration-300 group relative w-full flex justify-center items-center px-4 border h-12 border-transparent text-sm text-lg font-medium rounded-md text-white bg-blue-900 focus:outline-none">
+            className="relative flex items-center justify-center w-full h-12 px-4 text-sm text-lg font-medium text-white transition duration-300 ease-in bg-blue-900 border border-transparent rounded-md  group focus:outline-none">
             {loading ? (
               "Loading..."
             ) : (
