@@ -26,7 +26,7 @@ const SendNotifications = () => {
     ).catch((error) => {
       setLoading(false);
       console.log(error);
-      alert("Message sending failed");
+      // alert("Message sending failed");
     }
     );
   };
@@ -92,7 +92,7 @@ const SendNotifications = () => {
           <button
             type="submit"
             disabled={loading}
-            className="relative flex items-center justify-center w-full h-12 px-4 text-sm text-lg font-medium text-white transition duration-300 ease-in bg-blue-900 border border-transparent rounded-md  group focus:outline-none">
+            className="relative flex items-center justify-center w-full h-12 px-4 text-sm text-lg font-medium text-white transition duration-300 ease-in bg-blue-900 border border-transparent rounded-md group focus:outline-none">
             {loading ? (
               "Loading..."
             ) : (
